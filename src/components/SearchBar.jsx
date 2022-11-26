@@ -9,7 +9,7 @@ const SearchBar = ({ setMovies }) => {
   useEffect(() => {
     key &&
       getData(
-        `https://api.themoviedb.org/3/search/movie?api_key=3bb216411421fdef32dab7fb43d28fa2&query=${key}`,
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${key}`,
         setMovies
       );
   }, [key]);

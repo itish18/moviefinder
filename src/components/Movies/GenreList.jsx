@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 const GenreList = ({ list, setMovies, currPage, setCurrPage }) => {
   const [selectedGenre, setSelectedGenre] = useState(1);
   const { getData } = useFetch();
-  const fetchMoviesURL = `https://api.themoviedb.org/3/movie/popular?api_key=3bb216411421fdef32dab7fb43d28fa2&language=en-US&page=${currPage}`;
-  const filterByGenreURL = `https://api.themoviedb.org/3/discover/movie?api_key=3bb216411421fdef32dab7fb43d28fa2&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currPage}&with_genres=${selectedGenre}&with_watch_monetization_types=flatrate`;
+  const fetchMoviesURL = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${currPage}`;
+  const filterByGenreURL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currPage}&with_genres=${selectedGenre}&with_watch_monetization_types=flatrate`;
 
   useEffect(() => {
     getData(selectedGenre === 1 ? fetchMoviesURL : filterByGenreURL, setMovies);
