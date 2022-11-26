@@ -10,7 +10,7 @@ const Cast = ({ id }) => {
   useEffect(() => {
     id &&
       getData(
-        `https://api.themoviedb.org/3/movie/${id}/credits?api_key=3bb216411421fdef32dab7fb43d28fa2&language=en-US`,
+        `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
         setCast
       );
   }, [id]);
