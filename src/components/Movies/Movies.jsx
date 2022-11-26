@@ -10,7 +10,7 @@ const Pagination = lazy(() => import("../Pagination"));
 const Movies = () => {
   const [movies, setMovies] = useState();
   const [currPage, setCurrPage] = useState(1);
-  const { isLoading } = useFetch();
+  const { isLoading, error } = useFetch();
 
   const genresList = [
     { id: 1, name: "Popular" },
@@ -39,6 +39,14 @@ const Movies = () => {
     return (
       <div className="flex items-center justify-center h-[100vh] text-[3rem] font-bold">
         Loading...
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-[100vh] text-[3rem] font-bold">
+        Something went wrong!
       </div>
     );
   }
