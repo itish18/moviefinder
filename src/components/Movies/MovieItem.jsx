@@ -20,7 +20,7 @@ const MovieItem = ({ m, genresList }) => {
         src={
           image
             ? `https://image.tmdb.org/t/p/original/${image}`
-            : "./movieImage.jpg"
+            : "https://res.cloudinary.com/dv7dm2knk/image/upload/v1669455354/movieImage_i2zgui.png"
         }
         className={`rounded-xl object-cover transition-all 1s ease m-0 min-w-[15rem] min-h-[360px] hover:-translate-y-2`}
       />

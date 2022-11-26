@@ -8,7 +8,7 @@ const CastItem = ({ id, name, char, profile }) => {
         src={`${
           profile
             ? `https://image.tmdb.org/t/p/original${profile}`
-            : "/userImage.png"
+            : "https://res.cloudinary.com/dv7dm2knk/image/upload/v1669455362/userImage_lksppf.png"
         }`}
       />
       <div className="items-start ">

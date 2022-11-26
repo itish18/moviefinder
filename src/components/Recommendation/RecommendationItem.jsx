@@ -14,7 +14,7 @@ const RecommendationItem = ({ recmd }) => {
         src={`${
           poster
             ? `https://image.tmdb.org/t/p/original${poster}`
-            : "/movieImage.jpg"
+            : "https://res.cloudinary.com/dv7dm2knk/image/upload/v1669455354/movieImage_i2zgui.png"
         }`}
       />
       <p className="text-sm">{title}</p>
